@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Bot</title>
+    <style>
+        body { font-family: Arial; margin: 20px; background: #f7f7f7; }
+        .chat-box { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+        .user-msg, .bot-msg { margin-bottom: 10px; }
+        .user-msg { color: blue; }
+        .bot-msg { color: green; }
+    </style>
+
+    <!-- Enlazando el archivo manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Registro del service worker (si lo tienes configurado) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch((error) => {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="chat-box" id="chatbox">
+        <div class="bot-msg">🤖 Hola, soy tu asistente virtual del hotel. ¿En qué puedo ayudarte?</div>
+    </div>
+    <input type="text" id="userInput" placeholder="Escribe tu mensaje aquí..." style="width: 80%;">
+    <button onclick="send()">Enviar</button>
+
+    <script>
+        function send() {
+            let input = document.getElementById("userInput");
+            let msg = input.value;
+            if (!msg) return;
+
+            document.getElementById("chatbox").innerHTML += `<div class='user-msg'><strong>Tú:</strong> ${msg}</div>`;
+            fetch(`/get?msg=${msg}`)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("chatbox").innerHTML += `<div class='bot-msg'><strong>Bot:</strong> ${data.response}</div>`;
+                    input.value = "";
+                    input.focus();
+                });
+        }
+    </script>
+</body>
+</html>

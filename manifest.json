@@ -1,0 +1,17 @@
+{
+    "name": "Hotel Bot",
+    "short_name": "HotelBot",
+    "description": "Asistente virtual para tu hotel",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+      {
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  

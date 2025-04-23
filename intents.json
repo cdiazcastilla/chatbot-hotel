@@ -1,0 +1,103 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": ["Hola", "Buenos días", "Hay alguien ahí?", "Hola, ¿qué tal?", "Hey"],
+      "responses": ["Hola, ¿en qué puedo ayudarte?", "¡Hola! ¿Qué deseas saber sobre el hotel?"]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["Adiós", "Nos vemos", "Hasta luego", "Chao"],
+      "responses": ["¡Hasta pronto!", "Gracias por contactarnos. ¡Que tengas un gran día!"]
+    },
+    {
+      "tag": "checkin",
+      "patterns": ["¿A qué hora es el check-in?", "¿Cuándo puedo entrar a la habitación?", "Hora de entrada"],
+      "responses": ["El check-in está disponible desde las 3:00 PM."]
+    },
+    {
+      "tag": "checkout",
+      "patterns": ["¿A qué hora es el check-out?", "Hora de salida", "¿Cuándo debo dejar la habitación?"],
+      "responses": ["El check-out es hasta las 12:00 PM."]
+    },
+    {
+      "tag": "servicios",
+      "patterns": ["¿Qué servicios tiene el hotel?", "¿Tienen piscina?", "¿Hay wifi gratuito?", "Servicios disponibles"],
+      "responses": ["Ofrecemos piscina, wifi gratuito, restaurante, gimnasio y servicio a la habitación."]
+    },
+    {
+      "tag": "ubicacion",
+      "patterns": ["¿Dónde está ubicado el hotel?", "Ubicación del hotel", "¿Cómo llego al hotel?"],
+      "responses": ["Estamos ubicados en el centro de la ciudad, cerca de la plaza principal."]
+    },
+
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "Lo siento, no entendí eso. ¿Puedes repetirlo?",
+        "No estoy seguro de cómo responder a eso. ¿Podrías reformularlo?"
+      ]
+    },
+    
+    {
+      "tag": "toalla",
+      "patterns": [
+        "¿Podrías traerme una toalla a la habitación?",
+        "Necesito una toalla",
+        "¿Me pueden dar una toalla?",
+        "Me hace falta una toalla",
+        "Traigan una toalla por favor"
+      ],
+      "responses": [
+        "Claro que sí, en breve enviaremos una toalla a tu habitación.",
+        "Ya enviamos una toalla, gracias por avisarnos.",
+        "Con gusto, la toalla está en camino."
+      ]
+    },
+    {
+      "tag": "cobija",
+      "patterns": [
+        "No hay cobijas en esta habitación",
+        "¿Podrían traernos una cobija?",
+        "Faltan cobijas, ¿nos pueden ayudar?",
+        "¿Tienen cobijas disponibles?",
+        "Necesitamos cobijas por favor"
+      ],
+      "responses": [
+        "Enseguida enviaremos cobijas a tu habitación.",
+        "¡Gracias por informarnos! Vamos a llevarte cobijas cuanto antes.",
+        "Sí, ya vamos en camino con las cobijas."
+      ]
+    },
+    {
+      "tag": "wifi",
+      "patterns": [
+        "¿Me regalas la clave del wifi por favor?",
+        "¿Cuál es la clave del wifi?",
+        "Dame la contraseña del internet",
+        "¿Tienen wifi?",
+        "Wifi por favor"
+      ],
+      "responses": [
+        "La clave del wifi es: **hotel2024**",
+        "Claro, la contraseña del wifi es **hotel2024**",
+        "Por supuesto, puedes conectarte con esta clave: **hotel2024**"
+      ]
+    },
+    {
+      "tag": "desayuno",
+      "patterns": [
+        "¿Cuál es el menú del desayuno?",
+        "¿Qué hay para desayunar?",
+        "Desayuno por favor",
+        "¿Qué opciones tienen en el desayuno?",
+        "¿Me puedes dar el menú del desayuno?"
+      ],
+      "responses": [
+        "Aquí tienes el menú del desayuno:\n\n- Sándwich de jamón\n- Huevos perico\n- Huevo revuelto\n- Huevos en cacerola\n- Arepa asada\n- Tajadas fritas\n- Patacón\n- Pancakes\n- Arepa con huevo\n- Café con leche\n- Chocolate\n- Milo\n- Pan asado con mantequilla"
+      ]
+    }
+  ]
+}
+
