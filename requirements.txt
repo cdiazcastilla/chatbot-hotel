@@ -1,5 +1,6 @@
 Flask
 tensorflow
 nltk
-gunicorn
+gunicorn==<versión>
+
 
