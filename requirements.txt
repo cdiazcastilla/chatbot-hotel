@@ -1,7 +1,6 @@
-Flask
-tensorflow
-nltk
+Flask==2.0.3
+tensorflow==2.6.0
+nltk==3.6.7
 gunicorn==20.1.0
-
 
 
